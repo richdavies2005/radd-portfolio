@@ -1,0 +1,108 @@
+{
+  "title": "Seriously Good FMCG Packaging",
+  "year": "2025",
+  "category": "graphic-design",
+  "tags": [
+    "packaging",
+    "branding",
+    "fmcg"
+  ],
+  "summary": "Placeholder summary — a fast-moving consumer goods packaging system, from shelf-ready structure to the finished range. Replace this with the real project write-up when you're ready.",
+  "blurbLabel": "The project",
+  "blurb": "Placeholder — a short blurb about this project. Replace this in project.json with a few sentences about the brief, your approach, and how it came together.",
+  "role": "Packaging Design",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe InDesign",
+    "Photography"
+  ],
+  "featured": true,
+  "order": 1,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "cover.jpg",
+  "accentColor": "flame",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Seriously Good FMCG packaging — image 1",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Seriously Good FMCG packaging — image 2",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Seriously Good FMCG packaging — image 3",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "Seriously Good FMCG packaging — image 4",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "Seriously Good FMCG packaging — image 5",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "Seriously Good FMCG packaging — image 6",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "07.jpg",
+      "alt": "Seriously Good FMCG packaging — image 7",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "08.jpg",
+      "alt": "Seriously Good FMCG packaging — image 8",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "09.jpg",
+      "alt": "Poster for Seriously Good FMCG packaging",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "10.jpg",
+      "alt": "Hero Shot for Seriously Good FMCG packaging",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    }
+  ]
+}

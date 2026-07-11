@@ -1,0 +1,68 @@
+{
+  "title": "Tongariro Crossing Hike",
+  "year": "2024",
+  "category": "photography",
+  "tags": [
+    "landscape",
+    "alpine"
+  ],
+  "summary": "Landscape work from the Tongariro Alpine Crossing — dawn on the trail, the volcanic cone under a lenticular cloud, steaming vents, and the Emerald Lakes seen from the ridge.",
+  "blurbLabel": "The shoot",
+  "blurb": "Example blurb — this text sits in the panel to the left of the first gallery image and scrolls/scales along with the photos. Replace it in series.json with a few sentences about this shoot.",
+  "featured": true,
+  "order": 3,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "01.jpg",
+  "accentColor": "acid",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "An Emerald Lake mirroring a rocky volcanic slope under a clear blue sky",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Hikers descending the trail at dawn with a wide valley and pink sky beyond",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Two hikers on a ridge silhouetted against billowing volcanic steam",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "The volcanic cone of Ngauruhoe capped by a lenticular cloud at first light",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "The Emerald Lakes and steaming vents seen from the ridge, hikers on the path below",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "Layered volcanic ridgelines receding into the distance under a pale sky",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    }
+  ]
+}

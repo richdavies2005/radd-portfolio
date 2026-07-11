@@ -1,0 +1,48 @@
+<!-- @dsCard group="Foundations" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RADD — Spacing & layering</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --canvas:#121212; --raised:#1a1a1a; --ink:#f5f2ea; --muted:#a8a49c; --flame:rgb(215 25 33); }
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--canvas); color: var(--ink); font-family: Inter, sans-serif; padding: 32px; }
+  h1 { font-size: 14px; font-family: "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 24px; }
+  h2 { font-size: 12px; font-family: "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 28px 0 12px; }
+  .bars { display: flex; flex-direction: column; gap: 8px; }
+  .bar { height: 20px; background: var(--flame); position: relative; }
+  .bar span { position: absolute; left: calc(100% + 12px); top: 2px; font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
+  table { border-collapse: collapse; width: 100%; font-family: "JetBrains Mono", monospace; font-size: 12px; }
+  td, th { border: 1px solid rgb(168 164 156 / 0.2); padding: 8px 12px; text-align: left; }
+  th { color: var(--muted); font-weight: 400; }
+  .note { margin-top: 24px; padding: 14px 16px; background: var(--raised); font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .note b { color: var(--ink); }
+</style>
+</head>
+<body>
+  <h1>RADD / Spacing &amp; layering</h1>
+  <h2>8px spacing scale (Tailwind units are 8px multiples)</h2>
+  <div class="bars">
+    <div class="bar" style="width:8px"><span>1 · 8px</span></div>
+    <div class="bar" style="width:16px"><span>2 · 16px</span></div>
+    <div class="bar" style="width:24px"><span>3 · 24px</span></div>
+    <div class="bar" style="width:48px"><span>6 · 48px</span></div>
+    <div class="bar" style="width:96px"><span>12 · 96px</span></div>
+    <div class="bar" style="width:160px"><span>20 · 160px</span></div>
+  </div>
+  <h2>z-index — six named layers only, no arbitrary values</h2>
+  <table>
+    <tr><th>token</th><th>value</th><th>use</th></tr>
+    <tr><td>z-content</td><td>0</td><td>base content / images</td></tr>
+    <tr><td>z-overlap</td><td>10</td><td>overlapping secondary images, color panels</td></tr>
+    <tr><td>z-type</td><td>20</td><td>display type over images</td></tr>
+    <tr><td>z-sticky</td><td>30</td><td>pinned section chrome</td></tr>
+    <tr><td>z-nav</td><td>40</td><td>nav bar</td></tr>
+    <tr><td>z-cursor / z-modal</td><td>50 / 100</td><td>custom cursor / lightbox</td></tr>
+  </table>
+  <div class="note"><b>Grid:</b> 12-column CSS Grid with named grid-template-areas per section; overlaps are deliberate 1–2 column intersections, never freehand absolute positioning. Max container 1440px.</div>
+</body>
+</html>

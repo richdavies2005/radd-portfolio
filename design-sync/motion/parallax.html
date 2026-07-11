@@ -1,0 +1,40 @@
+<!-- @dsCard group="Motion" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RADD — Scroll motion spec</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --canvas:#121212; --raised:#1a1a1a; --ink:#f5f2ea; --muted:#a8a49c; --flame:rgb(215 25 33); --cobalt:#2c4bff; }
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--canvas); color: var(--ink); font-family: Inter, sans-serif; padding: 32px; }
+  h1 { font-size: 14px; font-family: "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 24px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  td, th { border: 1px solid rgb(168 164 156 / 0.2); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { font-family: "JetBrains Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 400; }
+  td:first-child { font-family: "JetBrains Mono", monospace; font-size: 12px; white-space: nowrap; }
+  .demo { margin: 24px 0; height: 120px; overflow: hidden; position: relative; }
+  .demo .inner { position: absolute; inset: -12%; background: linear-gradient(160deg, var(--cobalt), #101c66); animation: drift 3s ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: translateY(-6%);} to { transform: translateY(6%);} }
+  @media (prefers-reduced-motion: reduce) { .demo .inner { animation: none; } }
+  .note { margin-top: 20px; padding: 14px 16px; background: var(--raised); font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .note b { color: var(--ink); }
+</style>
+</head>
+<body>
+  <h1>RADD / Scroll motion — parallax spec (Motion / motion.dev)</h1>
+  <div class="demo"><div class="inner"></div></div>
+  <table>
+    <tr><th>surface</th><th>primitive</th><th>values</th></tr>
+    <tr><td>Hero featured image</td><td>ParallaxImage (inner drift)</td><td>amount 0.10 — ±10% travel, scale 1.22</td></tr>
+    <tr><td>Home highlights cards</td><td>ParallaxLayer (whole card)</td><td>depths +0.12 / −0.22 / +0.18 (× 80px)</td></tr>
+    <tr><td>Index card covers</td><td>ParallaxImage fill</td><td>amount 0.06</td></tr>
+    <tr><td>Case-study hero/large images</td><td>ParallaxImage</td><td>amount 0.07 — medium/small images stay static</td></tr>
+    <tr><td>Case-study overlap pair (front)</td><td>ParallaxLayer</td><td>depth +0.25 — foreground leads, pair separates</td></tr>
+    <tr><td>Gallery hero/large tiles</td><td>ParallaxImage fill</td><td>amount 0.06</td></tr>
+  </table>
+  <div class="note"><b>Contract:</b> Motion owns scroll-linked transforms (useScroll + useTransform, transform-only, viewport range ["start end","end start"]). GSAP owns entrance timelines (SplitText hero, reveals, page wipes). The two never animate the same element. All parallax resolves to a static end-state under prefers-reduced-motion. Positive depth = foreground (leads scroll); negative = background (lags).</div>
+</body>
+</html>

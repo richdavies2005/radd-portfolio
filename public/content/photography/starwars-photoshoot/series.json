@@ -1,0 +1,68 @@
+{
+  "title": "Starwars Photoshoot",
+  "year": "2026",
+  "category": "photography",
+  "tags": [
+    "cosplay",
+    "portrait"
+  ],
+  "summary": "A Star Wars-inspired portrait series shot at golden hour in an Auckland botanical garden — a flowing pastel gown, an illuminated lightsaber, and the Sky Tower on the horizon.",
+  "blurbLabel": "The shoot",
+  "blurb": "Placeholder — a short blurb about this shoot. Replace this in series.json with a few sentences about where it was made, the light you were chasing, and how it came together.",
+  "featured": true,
+  "order": 2,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "cover.jpg",
+  "accentColor": "flame",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Model in a pastel gown holding an illuminated lightsaber in a lavender garden, Sky Tower behind at sunset",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Model seen from behind, gown trailing, walking toward the Sky Tower at golden hour",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Model raising a lit lightsaber overhead amid dense green foliage",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "Model standing on a mossy log holding a glowing lightsaber upright at dusk",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "Model in a pastel gown from behind in a garden bed, Sky Tower and sunset sky beyond",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "Model mid-spin, gown flaring across the grass in low evening light",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    }
+  ]
+}

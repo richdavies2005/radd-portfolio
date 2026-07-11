@@ -1,0 +1,90 @@
+{
+  "title": "When Two or More Board Game",
+  "year": "2025",
+  "category": "graphic-design",
+  "tags": [
+    "packaging",
+    "illustration",
+    "games"
+  ],
+  "summary": "Placeholder summary — brand, board, and packaging design for a board game titled \"When Two or More.\" Replace this with the real project write-up when you're ready.",
+  "blurbLabel": "The project",
+  "blurb": "Placeholder — a short blurb about this project. Replace this in project.json with a few sentences about the brief, your approach, and how it came together.",
+  "role": "Game & Packaging Design",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe InDesign"
+  ],
+  "featured": true,
+  "order": 2,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "08.jpg",
+  "accentColor": "cobalt",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "When Two or More board game — image 1",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "When Two or More board game — image 2",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "When Two or More board game — image 3",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "When Two or More board game — image 4",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "When Two or More board game — image 5",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "When Two or More board game — image 6",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "07.jpg",
+      "alt": "When Two or More board game — image 7",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "08.jpg",
+      "alt": "When Two or More board game — image 8",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    }
+  ]
+}

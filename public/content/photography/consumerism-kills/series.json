@@ -1,0 +1,93 @@
+{
+  "title": "Consumerism Kills",
+  "year": "2025",
+  "category": "photography",
+  "tags": [
+    "abstract",
+    "conceptual",
+    "consumerism"
+  ],
+  "summary": "This photography campaign explores the profound negative effects that consumerism is having on modern society. Conceived as a series of extreme, emotionally charged images, the project visualises the mental and contextual human suffering caused by our current age of consumption. While each image stands alone, when viewed together as a collated grid, the final compositions strongly reveal a deeper narrative about these societal impacts.",
+  "blurbLabel": "The shoot",
+  "blurb": "Placeholder — a short blurb about this shoot. Replace this in series.json with a few sentences about where it was made, the light you were chasing, and how it came together.",
+  "featured": true,
+  "order": 3,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "01.jpg",
+  "accentColor": "acid",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Surrounded by Consumerism",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Left in Darkness",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Reaching for an Escape",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "Blinded by Consumerism",
+      "caption": "",
+      "ratio": "square",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "Blind Purchase",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "Dead Weight",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "07.jpg",
+      "alt": "Drowning in Consumerism",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "08.jpg",
+      "alt": "Suffocation by Consumerism",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "09.jpg",
+      "alt": "The Harsh Truth",
+      "caption": "",
+      "ratio": "square",
+      "weight": "medium",
+      "overlap": "none"
+    }
+  ]
+}

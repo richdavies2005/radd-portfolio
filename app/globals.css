@@ -3,25 +3,120 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Primitive tokens — RGB triplets (not hex) so Tailwind's opacity
+     modifiers (bg-canvas/95, from-canvas/70, etc.) can compose them via
+     rgb(var(--color-x) / <alpha-value>) in tailwind.config.ts. A hex or
+     var()-only value silently breaks every /NN opacity utility. */
+  --color-canvas: 18 18 18; /* #121212 */
+  --color-canvas-raised: 26 26 26; /* #1a1a1a */
+  --color-ink: 245 242 234; /* #f5f2ea */
+  --color-ink-muted: 168 164 156; /* #a8a49c */
+  /* #e31b23 darkened ~5% — clears WCAG AA (4.63:1) for ink text on solid
+     flame blocks/badges while still reading as the same brand red. */
+  --color-flame: 215 25 33;
+  /* Brightened variant for flame-colored TEXT directly on canvas (eyebrows,
+     links, nav) — the block value above is too dark against canvas at
+     small text sizes (3.96:1); this clears 4.5:1. Never use as a background. */
+  --color-flame-text: 231 61 68;
+  --color-cobalt: 44 75 255; /* #2c4bff */
+  --color-acid: 217 255 63; /* #d9ff3f */
+  --color-paper: 245 242 234; /* #f5f2ea */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--color-ink));
+  background: rgb(var(--color-canvas));
+  font-family: var(--font-body);
+}
+
+/* Visible focus ring on every keyboard-focused interactive element. The
+   custom cursor deliberately does NOT replace this — keyboard users must
+   always see where focus is (plan's a11y guardrail). Offset so it reads
+   against both the dark canvas and the saturated accent blocks. */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-flame-text));
+  outline-offset: 3px;
+  border-radius: 1px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Scrollbar-less horizontal rails (FocusRail) — arrows + counter provide
+     the affordance the hidden scrollbar would have. */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Only pointer-fine devices get cursor/tilt effects — gated again in JS,
+   this is the CSS-side half of that contract (see lib/motion.ts). The custom
+   red dot replaces the native cursor everywhere, including over links and
+   buttons — which otherwise show the OS pointer hand on top of the dot. */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-none-fine,
+  .cursor-none-fine * {
+    cursor: none;
+  }
+}
+
+/* Section's broken-grid areas only apply at md+ — below that, content
+   stacks in DOM order via the flex-col fallback in the component itself.
+   grid-template-areas reads its value from a custom property so each
+   <Section> instance can supply its own composition (see components/layout/section.tsx). */
+@media (min-width: 768px) {
+  .grid-section[data-areas-md] {
+    grid-template-areas: var(--areas-md);
+  }
+}
+
+/* Text selection carries the brand thread. */
+::selection {
+  background: rgb(var(--color-flame));
+  color: rgb(var(--color-ink));
+}
+
+/* Mobile menu items rise in with a slight stagger (animation-delay is set
+   inline per item). Reduced-motion users see them in place immediately. */
+.menu-item {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .menu-item {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: menu-item-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes menu-item-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Index-grid covers rise in with a sibling stagger on arrival (--i is set
+   inline per card, capped in JSX so late items don't wait forever). Same
+   contract as .menu-item: visible by default, motion only when allowed. */
+.grid-item-in {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .grid-item-in {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: grid-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+  @keyframes grid-item-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

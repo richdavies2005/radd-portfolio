@@ -1,0 +1,84 @@
+{
+  "title": "Fashion Model Photoshoot",
+  "year": "2025",
+  "category": "photography",
+  "tags": [
+    "fashion",
+    "editorial"
+  ],
+  "summary": "A series of fashion photographs featuring two models in various pieces, captured at the Auckland Botanical Gardens. This series uses photography as a medium to represent the creativity that went into each of these fashion pieces. Fashion clothing designed by Neve Sutherland.",
+  "blurbLabel": "The shoot",
+  "blurb": "Placeholder — a short blurb about this shoot. Replace this in series.json with a few sentences about where it was made, the light you were chasing, and how it came together.",
+  "featured": true,
+  "order": 1,
+  "cover": "cover.jpg",
+  "coverRatio": "tall",
+  "headerImage": "06.jpg",
+  "accentColor": "cobalt",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Model mid-jump in a green playsuit and knee-high socks against tall industrial windows",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Model reclining on a stone garden bench in a blue satin outfit and blue knee-high socks",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Two models posed together in a garden, one in a green bow top, one in a blue satin playsuit",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "Model against a brick wall in a cream strapless dress embellished with blue dried flowers",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "Model in a pink coat trimmed with dried flowers, standing among pink snapdragons",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "Two looks side by side — a cream dress with blue dried flowers and a pink floral-trimmed coat",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "07.jpg",
+      "alt": "Model in a pink floral-trimmed coat and striped tights among garden flowers",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "08.jpg",
+      "alt": "Model seen from behind in an ivory jacket embroidered with a fern, standing in a fern forest",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "hero",
+      "overlap": "none"
+    }
+  ]
+}

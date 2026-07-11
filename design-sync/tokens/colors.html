@@ -1,0 +1,47 @@
+<!-- @dsCard group="Colors" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RADD — Color tokens</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --canvas: #121212;
+    --canvas-raised: #1a1a1a;
+    --ink: #f5f2ea;
+    --ink-muted: #a8a49c;
+    --flame: rgb(215 25 33);
+    --flame-text: rgb(231 61 68);
+    --cobalt: #2c4bff;
+    --acid: #d9ff3f;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--canvas); color: var(--ink); font-family: Inter, sans-serif; padding: 32px; }
+  h1 { font-size: 14px; font-family: "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .swatch { border: 1px solid rgb(168 164 156 / 0.2); }
+  .chip { height: 96px; }
+  .meta { padding: 10px 12px; background: var(--canvas-raised); font-family: "JetBrains Mono", monospace; font-size: 11px; line-height: 1.6; }
+  .meta strong { display: block; color: var(--ink); font-weight: 500; }
+  .meta span { color: var(--ink-muted); }
+  .rule { grid-column: 1 / -1; padding: 14px 16px; background: var(--canvas-raised); font-size: 12px; color: var(--ink-muted); line-height: 1.6; }
+  .rule b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <h1>RADD / Color tokens</h1>
+  <div class="grid">
+    <div class="swatch"><div class="chip" style="background:var(--canvas)"></div><div class="meta"><strong>canvas</strong><span>#121212 · base ground</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--canvas-raised)"></div><div class="meta"><strong>canvas-raised</strong><span>#1A1A1A · panels</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--ink)"></div><div class="meta"><strong>ink</strong><span>#F5F2EA · primary text</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--ink-muted)"></div><div class="meta"><strong>ink-muted</strong><span>#A8A49C · secondary text</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--flame)"></div><div class="meta"><strong>flame</strong><span>rgb(215 25 33) · block use, AA with ink text</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--flame-text)"></div><div class="meta"><strong>flame-text</strong><span>rgb(231 61 68) · text on canvas only, never a background</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--cobalt)"></div><div class="meta"><strong>cobalt</strong><span>#2C4BFF · Work section blocks</span></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--acid)"></div><div class="meta"><strong>acid</strong><span>#D9FF3F · Photography blocks, canvas text on top</span></div></div>
+    <div class="rule"><b>Usage discipline:</b> one large saturated color block per section, maximum. Flame is the single recurring brand thread (nav active, links, cursor, focus rings). Cobalt themes Work; acid themes Photography; About/Contact stay monochrome + flame.</div>
+  </div>
+</body>
+</html>

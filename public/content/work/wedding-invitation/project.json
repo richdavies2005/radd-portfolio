@@ -1,0 +1,50 @@
+{
+  "title": "Wedding Invitation",
+  "year": "2025",
+  "category": "graphic-design",
+  "tags": [
+    "print",
+    "typography",
+    "stationery"
+  ],
+  "summary": "Placeholder summary — an invitation suite and stationery design for a wedding. Replace this with the real project write-up when you're ready.",
+  "blurbLabel": "The project",
+  "blurb": "Placeholder — a short blurb about this project. Replace this in project.json with a few sentences about the brief, your approach, and how it came together.",
+  "role": "Print & Stationery Design",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe InDesign"
+  ],
+  "featured": true,
+  "order": 3,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "cover.jpg",
+  "accentColor": "acid",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Wedding invitation — image 1",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Wedding invitation — image 2",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Wedding invitation — image 3",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    }
+  ]
+}
