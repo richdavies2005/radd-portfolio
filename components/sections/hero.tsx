@@ -62,12 +62,16 @@ export function Hero() {
       aria-label="Introduction"
       className="relative h-dvh overflow-hidden border-b border-ink-muted/20"
     >
+      {/* Mobile/tablet stack top-anchored (pt-20 clears the fixed nav, matching
+          the other pages); the portrait takes the remaining height down to the
+          break so it can never overflow under the nav. The two-column layout is
+          a desktop-only (lg) treatment — deliberately unchanged. */}
       <motion.div
         style={reduced ? undefined : { scale, filter, opacity }}
-        className="flex h-full flex-col justify-end px-3 pt-12 md:grid md:grid-cols-12 md:items-end md:px-6"
+        className="flex h-full flex-col px-3 pt-20 lg:grid lg:grid-cols-12 lg:items-end lg:px-6 lg:pt-12"
       >
-        {/* Name block — bottom-left, sitting on the break line. */}
-        <div className="relative z-type pb-6 md:col-span-7 md:pb-10">
+        {/* Name block — bottom-left on desktop, top of the stack on mobile. */}
+        <div className="relative z-type shrink-0 pb-6 lg:col-span-7 lg:pb-10">
           <p
             data-hero-rise
             className="font-label text-xs uppercase tracking-wider text-flame-text"
@@ -75,10 +79,10 @@ export function Hero() {
             Communication Design &amp; Photography — Auckland, NZ
           </p>
           <h1 className="mt-3 font-display font-bold leading-[0.9] tracking-tight text-ink">
-            <span data-hero-rise className="block text-9xl md:text-10xl">
+            <span data-hero-rise className="block text-9xl lg:text-10xl">
               Richard
             </span>
-            <span data-hero-rise className="block text-9xl md:text-10xl">
+            <span data-hero-rise className="block text-9xl lg:text-10xl">
               Davies
             </span>
           </h1>
@@ -90,10 +94,11 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Portrait — transparent PNG, feet on the section break. */}
+        {/* Portrait — transparent PNG, feet on the section break. Fills the
+            leftover height on mobile/tablet; fixed 78vh column on desktop. */}
         <div
           data-hero-rise
-          className="relative h-[42vh] shrink-0 md:col-span-5 md:h-[78vh] md:self-end"
+          className="relative min-h-0 flex-1 lg:col-span-5 lg:h-[78vh] lg:flex-none lg:self-end"
         >
           <Image
             src="/hero/portrait.png"
@@ -101,7 +106,7 @@ export function Hero() {
             fill
             priority
             className="object-contain object-bottom"
-            sizes="(min-width: 768px) 40vw, 100vw"
+            sizes="(min-width: 1024px) 40vw, 100vw"
           />
         </div>
       </motion.div>
