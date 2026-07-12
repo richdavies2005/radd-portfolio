@@ -87,10 +87,11 @@ export function Hero() {
           </h1>
         </div>
 
-        {/* Portrait — transparent PNG, feet on the section break. On mobile it
-            fills the leftover height and covers the full width (object-cover
-            clips the empty transparent band above the cap, so the figure reads
-            large); from md up it's a fixed 78vh column, contained. */}
+        {/* Portrait — transparent PNG, always fully shown (object-contain, never
+            cropped), anchored to the bottom so it stands on the section break.
+            The source is tightly cropped (little headroom), so contain still
+            reads large. On mobile it fills the leftover height; from md up it's
+            a fixed 78vh column beside the name. */}
         <div
           data-hero-rise
           className="relative min-h-0 flex-1 md:col-span-5 md:h-[78vh] md:flex-none md:self-end"
@@ -100,7 +101,7 @@ export function Hero() {
             alt="Richard Davies"
             fill
             priority
-            className="object-cover object-bottom md:object-contain"
+            className="object-contain object-bottom"
             sizes="(min-width: 768px) 40vw, 100vw"
           />
         </div>
