@@ -60,7 +60,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       aria-label="Introduction"
-      className="relative h-dvh overflow-hidden border-b border-ink-muted/20"
+      className="relative h-dvh overflow-hidden border-b border-ink-muted/20 md:h-auto lg:h-dvh"
     >
       {/* Mobile (<md): a top-anchored stack — pt-20 clears the fixed nav, name
           on top, portrait filling the rest down to the break. From md up it's
@@ -94,7 +94,7 @@ export function Hero() {
             a fixed 78vh column beside the name. */}
         <div
           data-hero-rise
-          className="relative min-h-0 flex-1 md:col-span-5 md:h-[78vh] md:flex-none md:self-end"
+          className="relative min-h-0 flex-1 md:col-span-5 md:aspect-[1066/1320] md:h-auto md:flex-none md:self-end lg:aspect-auto lg:h-[78vh]"
         >
           <Image
             src="/hero/portrait.png"
