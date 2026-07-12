@@ -60,7 +60,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       aria-label="Introduction"
-      className="relative h-dvh overflow-hidden border-b border-ink-muted/20 md:h-auto lg:h-dvh"
+      className="relative h-dvh overflow-hidden border-b border-ink-muted/20 md:h-auto xl:h-dvh"
     >
       {/* Mobile (<md): a top-anchored stack — pt-20 clears the fixed nav, name
           on top, portrait filling the rest down to the break. From md up it's
@@ -78,10 +78,10 @@ export function Hero() {
             Communication Design &amp; Photography — Auckland, NZ
           </p>
           <h1 className="mt-3 font-display font-bold leading-[0.9] tracking-tight text-ink">
-            <span data-hero-rise className="block text-9xl lg:text-10xl">
+            <span data-hero-rise className="block text-9xl xl:text-10xl">
               Richard
             </span>
-            <span data-hero-rise className="block text-9xl lg:text-10xl">
+            <span data-hero-rise className="block text-9xl xl:text-10xl">
               Davies
             </span>
           </h1>
@@ -90,11 +90,12 @@ export function Hero() {
         {/* Portrait — transparent PNG, always fully shown (object-contain, never
             cropped), anchored to the bottom so it stands on the section break.
             The source is tightly cropped (little headroom), so contain still
-            reads large. On mobile it fills the leftover height; from md up it's
-            a fixed 78vh column beside the name. */}
+            reads large. On mobile it fills the leftover height; on tablet
+            (md–xl) the box is aspect-sized to hug the figure in a compact,
+            content-height hero; from xl up it's a fixed 78vh column. */}
         <div
           data-hero-rise
-          className="relative min-h-0 flex-1 md:col-span-5 md:aspect-[1066/1320] md:h-auto md:flex-none md:self-end lg:aspect-auto lg:h-[78vh]"
+          className="relative min-h-0 flex-1 md:col-span-5 md:aspect-[1066/1320] md:h-auto md:flex-none md:self-end xl:aspect-auto xl:h-[78vh]"
         >
           <Image
             src="/hero/portrait.png"
