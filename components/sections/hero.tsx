@@ -62,16 +62,15 @@ export function Hero() {
       aria-label="Introduction"
       className="relative h-dvh overflow-hidden border-b border-ink-muted/20"
     >
-      {/* Mobile/tablet stack top-anchored (pt-20 clears the fixed nav, matching
-          the other pages); the portrait takes the remaining height down to the
-          break so it can never overflow under the nav. The two-column layout is
-          a desktop-only (lg) treatment — deliberately unchanged. */}
+      {/* Mobile (<md): a top-anchored stack — pt-20 clears the fixed nav, name
+          on top, portrait filling the rest down to the break. From md up it's
+          the two-column layout: name left, portrait right, both on the break. */}
       <motion.div
         style={reduced ? undefined : { scale, filter, opacity }}
-        className="flex h-full flex-col px-3 pt-20 lg:grid lg:grid-cols-12 lg:items-end lg:px-6 lg:pt-12"
+        className="flex h-full flex-col px-3 pt-20 md:grid md:grid-cols-12 md:items-end md:px-6 md:pt-12"
       >
-        {/* Name block — bottom-left on desktop, top of the stack on mobile. */}
-        <div className="relative z-type shrink-0 pb-6 lg:col-span-7 lg:pb-10">
+        {/* Name block — top of the stack on mobile, bottom-left from md up. */}
+        <div className="relative z-type shrink-0 pb-6 md:col-span-7 md:pb-10">
           <p
             data-hero-rise
             className="font-label text-xs uppercase tracking-wider text-flame-text"
@@ -86,27 +85,23 @@ export function Hero() {
               Davies
             </span>
           </h1>
-          <p
-            data-hero-rise
-            className="mt-4 font-label text-xs uppercase tracking-wider text-ink-muted"
-          >
-            Selected work below
-          </p>
         </div>
 
-        {/* Portrait — transparent PNG, feet on the section break. Fills the
-            leftover height on mobile/tablet; fixed 78vh column on desktop. */}
+        {/* Portrait — transparent PNG, feet on the section break. On mobile it
+            fills the leftover height and covers the full width (object-cover
+            clips the empty transparent band above the cap, so the figure reads
+            large); from md up it's a fixed 78vh column, contained. */}
         <div
           data-hero-rise
-          className="relative min-h-0 flex-1 lg:col-span-5 lg:h-[78vh] lg:flex-none lg:self-end"
+          className="relative min-h-0 flex-1 md:col-span-5 md:h-[78vh] md:flex-none md:self-end"
         >
           <Image
             src="/hero/portrait.png"
             alt="Richard Davies"
             fill
             priority
-            className="object-contain object-bottom"
-            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover object-bottom md:object-contain"
+            sizes="(min-width: 768px) 40vw, 100vw"
           />
         </div>
       </motion.div>
