@@ -11,6 +11,7 @@ import {
 } from "motion/react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Typewriter } from "@/components/motion/typewriter";
 
 /**
  * Home hero: name in big display type on the left, transparent portrait on
@@ -77,12 +78,27 @@ export function Hero() {
           >
             Communication Design &amp; Photography — Auckland, NZ
           </p>
+          {/* Real title stays in the h1 for SEO/screen readers; the visible
+              typewriter cycling "Richard Davies." / "Creative Portfolio." is
+              decorative (aria-hidden). An invisible sizer reserves the exact
+              two-line height of the longest phrase, and the animated text sits
+              absolutely on top of it — so however the typing/cursor wraps, it
+              can never resize the name block (which would shift the photo on
+              mobile or the eyebrow on tablet). */}
           <h1 className="mt-3 font-display font-bold leading-[0.9] tracking-tight text-ink">
-            <span data-hero-rise className="block text-9xl xl:text-10xl">
-              Richard
-            </span>
-            <span data-hero-rise className="block text-9xl xl:text-10xl">
-              Davies
+            <span className="sr-only">Richard Davies</span>
+            <span
+              data-hero-rise
+              aria-hidden
+              className="relative block text-5xl md:text-6xl lg:text-7xl xl:text-10xl"
+            >
+              <span className="invisible">Creative Portfolio.</span>
+              <span className="absolute inset-0">
+                <Typewriter
+                  texts={["Richard Davies.", "Creative Portfolio."]}
+                  periodClassName="text-flame-text"
+                />
+              </span>
             </span>
           </h1>
         </div>
