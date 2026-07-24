@@ -30,12 +30,14 @@ interface FocusRailProps {
   enableLightbox?: boolean;
   /** Small eyebrow above the intro blurb. */
   introLabel?: string;
-  /** The intro blurb itself — replace the placeholder when the real copy exists. */
+  /** The intro blurb itself — comes from the project's `blurb` field. */
   introText?: string;
 }
 
-const PLACEHOLDER_INTRO =
-  "Placeholder — a short blurb about this shoot goes here. Write about where it was made, the light you were chasing, and how it came together. This panel scrolls with the images; replace this copy when you're ready.";
+// Safety net for a project added without a `blurb` in its JSON: neutral copy
+// that reads fine live, rather than author-facing placeholder text.
+const DEFAULT_INTRO =
+  "Selected work from this project. Scroll through the gallery to see the full set.";
 
 /**
  * Horizontal focus gallery. Images (and a leading intro blurb) scale toward
@@ -57,7 +59,7 @@ export function FocusRail({
   images,
   enableLightbox = false,
   introLabel = "The shoot",
-  introText = PLACEHOLDER_INTRO,
+  introText = DEFAULT_INTRO,
 }: FocusRailProps) {
   const valid = images.filter((img): img is WorkImage & { src: string } => Boolean(img.src));
   const containerRef = useRef<HTMLDivElement>(null);

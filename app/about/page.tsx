@@ -1,31 +1,33 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Area } from "@/components/layout/section";
-import { Monogram } from "@/components/sections/monogram";
 
 export const metadata: Metadata = { title: "About" };
 
+// Each chip is evidenced by work published on the site: the first three by the
+// design projects, the last four by the photography series. Keep it that way.
 const DISCIPLINES = [
   "Brand identity",
-  "Editorial & print",
   "Packaging",
-  "Art direction",
-  "Landscape photography",
+  "Print & stationery",
+  "Conceptual photography",
+  "Fashion photography",
   "Portraiture",
-  "Wayfinding & signage",
+  "Landscape photography",
 ];
 
 const APPROACH = [
   {
     title: "Design",
-    body: "Systems before decoration — identity work built on a structure that holds up across every touchpoint it needs to survive, from a business card to a signage program.",
+    body: "Systems before decoration. I build identity work on a structure that holds up across every touchpoint it needs to survive, from a single pack to a full range.",
   },
   {
     title: "Photography",
-    body: "A light hand in the edit. The composition and the moment do the work; retouching stays in service of what was actually there.",
+    body: "A light hand in the edit. The composition and the moment do the work, and retouching stays in service of what was actually there.",
   },
   {
     title: "Process",
-    body: "Constraints first. Budget, medium, and audience shape the brief before any visual direction gets proposed — the work should feel inevitable, not decorative.",
+    body: "Constraints first. Budget, medium and audience shape the brief before I propose any visual direction, so the work feels inevitable rather than decorative.",
   },
 ];
 
@@ -47,19 +49,18 @@ export default function About() {
       <Section areasMd={BIO_AREAS} className="gap-6 px-3 pb-16 pt-4 md:px-6 md:pb-24">
         <Area name="bio" className="flex flex-col gap-4">
           <p className="font-body text-lg text-ink-muted">
-            Richard trained in communication design at Auckland University of
-            Technology (AUT), with minors in photography and creative
-            entrepreneurship — a combination that shows up directly in how he
-            works. Identity and packaging get the same attention to light,
-            composition, and restraint that goes into a photograph, and
-            client work is treated as an ongoing practice rather than a
-            series of one-off jobs.
+            I studied communication design at Auckland University of Technology
+            (AUT), with minors in photography and creative entrepreneurship.
+            That combination shows up directly in how I work. Identity and
+            packaging get the same attention to light, composition and
+            restraint that I put into a photograph, and I treat client work as
+            an ongoing practice rather than a run of one-off jobs.
           </p>
           <p className="font-body text-lg text-ink-muted">
-            Based in Auckland, working with clients directly on identity
-            systems, packaging, editorial design, and photography — design
-            and image-making treated as one practice rather than two
-            separate disciplines.
+            I&rsquo;m based in Auckland and work with clients directly on
+            identity systems, packaging, print and photography. Design and
+            image-making are one practice for me, not two separate
+            disciplines.
           </p>
           <ul className="mt-2 flex flex-wrap gap-2 font-label text-xs uppercase tracking-wider text-ink-muted">
             {DISCIPLINES.map((d) => (
@@ -70,7 +71,20 @@ export default function About() {
           </ul>
         </Area>
         <Area name="portrait">
-          <Monogram />
+          {/* Aspect matches the source frame (2:3), so the portrait is never
+              cropped through the face. From md up it's sized by height rather
+              than by column width — at wide viewports a full-width 2:3 box is
+              taller than the screen and runs off the bottom of the fold, so the
+              height is capped and the width derives from the ratio. */}
+          <div className="relative aspect-[2/3] w-full overflow-hidden md:ml-auto md:h-[min(50vh,28rem)] md:w-auto">
+            <Image
+              src="/about/portrait.jpg"
+              alt="Richard Davies"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 25vw, 100vw"
+            />
+          </div>
         </Area>
       </Section>
 
