@@ -19,7 +19,7 @@
   "order": 2,
   "cover": "cover.jpg",
   "coverRatio": "standard",
-  "headerImage": "08.jpg",
+  "headerImage": "07.jpg",
   "accentColor": "cobalt",
   "images": [
     {
@@ -73,14 +73,6 @@
     {
       "src": "07.jpg",
       "alt": "When Two or More board game — image 7",
-      "caption": "",
-      "ratio": "standard",
-      "weight": "large",
-      "overlap": "none"
-    },
-    {
-      "src": "08.jpg",
-      "alt": "When Two or More board game — image 8",
       "caption": "",
       "ratio": "standard",
       "weight": "large",

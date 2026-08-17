@@ -1,0 +1,69 @@
+{
+  "title": "Dash & Robyn Engagement",
+  "year": "2026",
+  "category": "photography",
+  "tags": [
+    "engagement",
+    "portrait",
+    "golden hour"
+  ],
+  "summary": "A golden-hour engagement session for Dash and Robyn, from the ring reveal to the quiet moments after.",
+  "blurbLabel": "The shoot",
+  "blurb": "Dash and Robyn are a couple I was thrilled to photograph on the evening of their engagement. We shot into the last of the golden hour, working quickly around the roses and fairy lights to catch the ring, the bouquet, and the way the two of them kept falling back into each other between frames. It was a privilege to be trusted with a moment this personal, and to hand them back images that hold the feeling of the day.",
+  "featured": true,
+  "order": 2,
+  "cover": "cover.jpg",
+  "coverRatio": "standard",
+  "headerImage": "cover.jpg",
+  "accentColor": "flame",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Dash and Robyn resting their foreheads together at golden hour, Robyn laughing, a rose bush behind them",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Dash and Robyn kissing at sunset, Robyn's hand raised over his shoulder showing her emerald engagement ring",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "Robyn's hands crossed over Dash's shoulder, her emerald and gold engagement ring catching the golden light",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "Dash and Robyn walking hand in hand across the grass, both smiling, roses and trees behind them",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "05.jpg",
+      "alt": "Robyn's hand raised to show her emerald engagement ring against warm fairy-light bokeh",
+      "caption": "",
+      "ratio": "standard",
+      "weight": "medium",
+      "overlap": "none"
+    },
+    {
+      "src": "06.jpg",
+      "alt": "Robyn laughing while holding a wrapped bouquet of white roses in the evening light",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    }
+  ]
+}

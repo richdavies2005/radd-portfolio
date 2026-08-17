@@ -1,6 +1,6 @@
 {
   "title": "Wedding Invitation",
-  "year": "2025",
+  "year": "2026",
   "category": "graphic-design",
   "tags": [
     "print",
@@ -16,7 +16,7 @@
     "Adobe InDesign"
   ],
   "featured": true,
-  "order": 3,
+  "order": 4,
   "cover": "cover.jpg",
   "coverRatio": "standard",
   "headerImage": "cover.jpg",

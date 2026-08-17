@@ -1,0 +1,60 @@
+{
+  "title": "Wētā Workshop Unleashed Packaging",
+  "year": "2025",
+  "category": "graphic-design",
+  "tags": [
+    "packaging",
+    "branding",
+    "collectibles"
+  ],
+  "summary": "Commissioned retail packaging for a new collectible line at the Wētā Workshop Unleashed gift store.",
+  "blurbLabel": "The project",
+  "blurb": "I was commissioned to design the retail packaging for a new collectible line sold at the Wētā Workshop Unleashed gift store. The box had to sit alongside the existing Unleashed range and hold its own on shelf, housing the four collectible busts and the Totem Pole they combine into. I kept the graffiti-splattered Unleashed look the brand is known for, and shaped the layout so the product and the way it displays read clearly at a glance.",
+  "role": "Packaging Design",
+  "tools": [
+    "Adobe Illustrator",
+    "Adobe InDesign",
+    "Adobe Photoshop",
+    "Photography"
+  ],
+  "featured": true,
+  "order": 3,
+  "cover": "cover.jpg",
+  "coverRatio": "tall",
+  "headerImage": "cover.jpg",
+  "accentColor": "cobalt",
+  "images": [
+    {
+      "src": "01.jpg",
+      "alt": "Front of the Wētā Workshop Unleashed Totem Pole box, the four collectible busts visible through the die-cut window",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "hero",
+      "overlap": "none"
+    },
+    {
+      "src": "02.jpg",
+      "alt": "Back of the box with the About panel describing the Totem Pole set and its creators",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "03.jpg",
+      "alt": "A stack of the finished boxes showing the printed lids and side panels",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "large",
+      "overlap": "none"
+    },
+    {
+      "src": "04.jpg",
+      "alt": "The packaging on display in the Wētā Workshop Unleashed gift store",
+      "caption": "",
+      "ratio": "tall",
+      "weight": "medium",
+      "overlap": "none"
+    }
+  ]
+}
